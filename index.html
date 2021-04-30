@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Strong Password</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+        $(window).on('load', function() {
+  $('.fadeButton').delay(4000).fadeIn()
+})
+
+      function res(){
+        var str =
+        "ABCDEFGH@#$%IJKLMN)_+-{}\OPQRSTUV~!^&*WXYZ01234|[]:;56789abcd~!^&efghijklm~!^&nopqrstuv+-{}wxyz";
+      var text = "";
+      for (var i = 0; i < 10; i++) {
+        text += str.charAt(Math.floor(Math.random() * str.length));
+      }
+      document.getElementById("result").innerText=text;
+      }
+      
+    </script>
+  </head>
+
+  <body >
+    <div id="middle">
+        <h1>Create Strong Password</h1>
+        <div id="text">click below button to get Strongest Password</div>
+        <button class="fadeButton" onclick="res()">Click Me</button>
+        <h2 id="result"></h2>
+
+
+
+        
+    
+     </div>
+  </body>
+   
+</html>
